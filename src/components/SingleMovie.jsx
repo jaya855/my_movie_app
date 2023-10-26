@@ -46,7 +46,7 @@ const SingleMovie = () => {
         <div className='h-[70%] w-[100%]  flex flex-col space-y-3'>
           <div className='h-[20%] w-[100%] '>
             <div className='font-bold text-[1.5rem] pl-[0.5rem] text-slate-600'>{
-            Title && (Title.length > 15 ? `${Title.slice(0, 15)}...` : Title)
+            Title && (Title.length > 12 ? `${Title.slice(0, 12)}...` : Title)
 
             }</div>
           </div>
@@ -56,7 +56,7 @@ const SingleMovie = () => {
             <div className='h-1/4 w-[100%] font-semibold text-[1rem] text-slate-700 flex justify-start items-center pl-[0.5rem]'>{imdbRating}</div>
             <div className='h-1/4 w-[100%] font-semibold text-[1rem] text-slate-700 flex justify-start items-center pl-[0.5rem]'>{
             
-            Country && (Country.length > 26 ? `${Country.slice(0, 26)}...` : Country)
+            Country && (Country.length > 20 ? `${Country.slice(0, 20)}...` : Country)
             
             }</div>
           </div>
