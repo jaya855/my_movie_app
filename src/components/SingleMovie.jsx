@@ -45,13 +45,20 @@ const SingleMovie = () => {
       <div className='h-[100%] w-[60%]  bg-slate-100 text-gray-800 flex items-center'>
         <div className='h-[70%] w-[100%]  flex flex-col space-y-3'>
           <div className='h-[20%] w-[100%] '>
-            <div className='font-bold text-[1.5rem] pl-[0.5rem] text-slate-600'>{Title}</div>
+            <div className='font-bold text-[1.5rem] pl-[0.5rem] text-slate-600'>{
+            Title && (Title.length > 15 ? `${Title.slice(0, 15)}...` : Title)
+
+            }</div>
           </div>
           <div className='h-[80%] w-[100%]  flex flex-col items-center'>
             <div className='h-1/4 w-[100%] font-semibold text-[1rem]  text-slate-700 flex justify-start items-center pl-[0.5rem]'>{Released}</div>
             <div className='h-1/4 w-[100%] font-semibold text-[1rem]  text-slate-700 flex justify-start items-center pl-[0.5rem]'>{Genre}</div>
             <div className='h-1/4 w-[100%] font-semibold text-[1rem] text-slate-700 flex justify-start items-center pl-[0.5rem]'>{imdbRating}</div>
-            <div className='h-1/4 w-[100%] font-semibold text-[1rem] text-slate-700 flex justify-start items-center pl-[0.5rem]'>{Country}</div>
+            <div className='h-1/4 w-[100%] font-semibold text-[1rem] text-slate-700 flex justify-start items-center pl-[0.5rem]'>{
+            
+            Country && (Country.length > 26 ? `${Country.slice(0, 26)}...` : Country)
+            
+            }</div>
           </div>
            <div className=' pl-[0.5rem] h-[30%] w-[100%]  flex items-center text-slate-500 '>
             <button className='hover:shadow-md hover:shadow-stone-500 lg:h-[80%] lg:w-[50%] md:h-[75%] md:w-[50%] sm:h-[75%] sm:w-[70%] h-[95%] w-[85%] border-slate-500 border-[0.15rem] rounded-md font-bold text-lg  hover:bg-slate-600 hover:text-white flex justify-center items-center' onClick={handleBack}>
